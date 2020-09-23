@@ -47,4 +47,4 @@ data = gdc.load()
 [codecov-image]: <https://codecov.io/gh/woctezuma/gamedatacrunch/branch/master/graph/badge.svg>
 
 [codacy]: <https://www.codacy.com/app/woctezuma/gamedatacrunch>
-[codacy-image]: <https://api.codacy.com/project/badge/Grade/TODO>
+[codacy-image]: <https://api.codacy.com/project/badge/Grade/1033f9ca50bf4fdf9d41bd2365558ce3>
