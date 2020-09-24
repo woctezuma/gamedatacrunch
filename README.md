@@ -19,6 +19,8 @@ pip install gamedatacrunch
 
 ## Usage
 
+### Load data
+
 Data is locally cached to `data/%Y%m%d_gamedatacrunch.json` for offline reuse.
 ```python
 import gamedatacrunch as gdc
@@ -26,9 +28,38 @@ import gamedatacrunch as gdc
 data = gdc.load()
 ```
 
+### Load a list of appIDs
+
+For a list of appIDs (`int`), without the matching app names:
+```python
+import gamedatacrunch as gdc
+
+data = gdc.load_app_ids()
+```
+
+### Retro-compatibility: Steam API
+
+For retro-compatibility, the output is formatted as with [Steam API][steam-api]:
+```python
+import gamedatacrunch as gdc
+
+data = gdc.load_as_steam_api()
+```
+
+### Retro-compatibility: SteamSpy API
+
+For retro-compatibility, the output is formatted as with [SteamSpy API][steamspy-api]:
+```python
+import gamedatacrunch as gdc
+
+data = gdc.load_as_steamspy_api()
+```
+
 <!-- Definitions -->
 
 [gamedatacrunch]: <https://www.gamedatacrunch.com>
+[steamspy-api]: <https://github.com/woctezuma/steamspypi>
+[steam-api]: <https://steamapi.xpaw.me/#ISteamApps/GetAppList>
 
 <!-- Definitions for badges -->
 
