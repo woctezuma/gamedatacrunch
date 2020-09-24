@@ -34,7 +34,7 @@ For a list of appIDs (`int`), without the matching app names:
 ```python
 import gamedatacrunch as gdc
 
-data = gdc.load_app_ids()
+app_ids = gdc.load_app_ids()
 ```
 
 ### Retro-compatibility: Steam API
