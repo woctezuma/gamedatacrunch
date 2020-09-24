@@ -6,3 +6,4 @@ from .utils import (
 )
 from .download import get_api_url, get_api_endpoint, download
 from .load import load, load_app_ids
+from .compatibility import load_as_steamspy_api, load_as_steam_api
