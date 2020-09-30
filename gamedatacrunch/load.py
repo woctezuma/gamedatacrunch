@@ -18,6 +18,8 @@ def load(file_name=None, url=None):
         with open(file_name, "w", encoding="utf8") as f:
             json.dump(data, f)
 
+    del data["cached"]
+
     return data
 
 
