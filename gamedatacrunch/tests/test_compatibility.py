@@ -16,6 +16,22 @@ class TestCompatibilityMethods(unittest.TestCase):
         dummy_app_slug = "counter_strike_global_offensive"
         return dummy_app_slug
 
+    def get_dummy_gdc_app(self):
+        gdc_app = dict()
+        gdc_app["i"] = self.get_dummy_app_id()
+        gdc_app["n"] = self.get_dummy_app_name()
+        gdc_app["s"] = self.get_dummy_app_slug()
+
+        return gdc_app
+
+    def test_convert_app_dict(self):
+        gdc_app = self.get_dummy_gdc_app()
+
+        app = gamedatacrunch.convert_app_dict(gdc_app, include_slug=True)
+        self.assertEqual(app["appid"], self.get_dummy_app_id())
+        self.assertEqual(app["name"], self.get_dummy_app_name())
+        self.assertEqual(app["slug"], self.get_dummy_app_slug())
+
     def test_load_as_steam_api(self):
         data = gamedatacrunch.load_as_steam_api()
         self.assertIn("applist", data.keys())
