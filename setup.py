@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='gamedatacrunch',
-    version='0.0.2',
+    version='0.0.3',
     author='Wok',
     author_email='wok@tuta.io',
     description='GameDataCrunch API on PyPI',
@@ -13,7 +13,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/woctezuma/gamedatacrunch',
-    download_url='https://github.com/woctezuma/gamedatacrunch/archive/0.0.2.tar.gz',
+    download_url='https://github.com/woctezuma/gamedatacrunch/archive/0.0.3.tar.gz',
     packages=setuptools.find_packages(),
     install_requires=[
         'requests',
