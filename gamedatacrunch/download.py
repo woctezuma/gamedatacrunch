@@ -2,15 +2,11 @@ import requests
 
 
 def get_api_url():
-    api_url = "https://www.gamedatacrunch.com"
-
-    return api_url
+    return "https://www.gamedatacrunch.com"
 
 
 def get_api_endpoint():
-    api_endpoint = "/api/steam/catalog"
-
-    return api_endpoint
+    return "/api/steam/catalog"
 
 
 def download(url=None):
@@ -19,12 +15,7 @@ def download(url=None):
 
     response = requests.get(url=url)
 
-    if response.ok:
-        data = response.json()
-    else:
-        data = None
-
-    return data
+    return response.json() if response.ok else None
 
 
 if __name__ == "__main__":

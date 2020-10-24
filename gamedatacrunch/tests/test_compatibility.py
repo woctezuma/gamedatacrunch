@@ -5,20 +5,16 @@ import gamedatacrunch
 
 class TestCompatibilityMethods(unittest.TestCase):
     def get_dummy_app_id(self):
-        dummy_app_id = 730
-        return dummy_app_id
+        return 730
 
     def get_dummy_app_name(self):
-        dummy_app_name = "Counter-Strike: Global Offensive"
-        return dummy_app_name
+        return "Counter-Strike: Global Offensive"
 
     def get_dummy_app_slug(self):
-        dummy_app_slug = "counter_strike_global_offensive"
-        return dummy_app_slug
+        return "counter_strike_global_offensive"
 
     def get_dummy_gdc_app(self):
-        gdc_app = dict()
-        gdc_app["i"] = self.get_dummy_app_id()
+        gdc_app = {"i": self.get_dummy_app_id()}
         gdc_app["n"] = self.get_dummy_app_name()
         gdc_app["s"] = self.get_dummy_app_slug()
 
