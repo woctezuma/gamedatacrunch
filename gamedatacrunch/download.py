@@ -26,7 +26,16 @@ def download(url=None):
         data = None
 
     print(data)
+
+    for i in data:
+        print(i)
+        
     return data
+
+# create base table df
+
+list = []
+
 
 if __name__ == "__main__":
     data = download()

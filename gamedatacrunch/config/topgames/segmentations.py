@@ -7,7 +7,7 @@ api_steam_endpoint = "/api/steam"
 
 api_top_performing_endpoint = "/list/all/reviews_total/"
 
-api_top_performing_endpoint_all_fields = "/list/all/reviews_total/?field=title,release_date,price,base_price_usd,ea_status,review,reviews_total,unfiltered_reviews_total,peak_ccu,followers,playtracker_insight_rank,current_topsellers_rank,reviews_score_fancy,metacritic_score,opencritic_score,hidden_gem_score"
+api_top_performing_endpoint_all_fields = "/api/steam/list/all/reviews_total/?field=title,release_date,price,base_price_usd,ea_status,review,reviews_total,unfiltered_reviews_total,peak_ccu,followers,playtracker_insight_rank,current_topsellers_rank,reviews_score_fancy,metacritic_score,opencritic_score,hidden_gem_score"
 
 
 # [TOP PERFORMING]
@@ -58,20 +58,20 @@ LAN_pvp = "sc47"
 
 # Netcode
 Netcode = dict(
-Rollback_Netcode = "sc7700"
+Rollback_Netcode = "sc7700",
 GGPO_Netcode = "sc7701"
 )
 
 # Controls
 Controls = dict(
-Full_Controller_Support = "sc28"
+Full_Controller_Support = "sc28",
 Partial_Controller_Support = "sc18"
 )
 
 # Steam Feature
 Steam_Feature = dict(
-Achievements = "sc22"
-Steam_Trading_Cards = "sc29"
+Achievements = "sc22",
+Steam_Trading_Cards = "sc29",
 Cloud = "sc23",
 Leaderboards = "sc25",
 Steam_Workshop = "sc30"
