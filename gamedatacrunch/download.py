@@ -3,8 +3,6 @@ import pandas as pd
 import json
 from config.topgames.segmentations import *
 
-class
-
 def get_api_url():
     api_url = api_url_address
     return api_url
@@ -29,10 +27,6 @@ def download(url=None):
 
     print(data)
     return data
-
-
-
-
 
 if __name__ == "__main__":
     data = download()
