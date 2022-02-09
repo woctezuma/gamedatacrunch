@@ -34,6 +34,12 @@ Hidden_score = "hidden_gem_score"
 # [FILTERS]
 api_filters_endpoint = "&filter="
 
+# Released/ Unreleased
+Released = dict(
+Released = "re_out",
+Unreleased = "re_not"
+)
+
 # Store Categories
 # Player Mode
 Single_Player = dict(
@@ -84,11 +90,6 @@ Remote_Play_To_Tablet = "sc42",
 Remote_Play_To_Phone = "sc41"
 )
 
-# Released/ Unreleased
-Released = dict(
-Released = "re_out",
-Unreleased = "re_not"
-)
 
 # Cost
 Cost = dict(
