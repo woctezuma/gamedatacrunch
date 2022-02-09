@@ -1,7 +1,12 @@
+from asyncio.windows_events import INFINITE
+from json.encoder import INFINITY
 import requests
 import pandas as pd
 import json
 from config.topgames.segmentations import *
+from config.topgames.segmentations_test import test_url_page
+
+top_100_performing_steam_games = []
 
 def get_api_url():
     api_url = api_url_address
@@ -13,29 +18,38 @@ def get_api_endpoint():
     return api_endpoint
 
 
-def download(url=None):
-    if url is None:
-        url = get_api_url() + get_api_endpoint()
+def download():
 
-    response = requests.get(url=url)
+    page = 658
 
-    if response.ok:
-        data = response.json()
-        json_data = json.loads(response.text)
-    else:
-        data = None
+    for page in range(page, 665):
 
-    print(data)
+        url = get_api_url() + test_url_page(page)
 
-    for i in data:
-        print(i)
-        
-    return data
+        response = requests.get(url=url)
+
+        if response.ok:
+            data = response.json()
+            json_data = json.loads(response.text)
+        else:
+            print("All pages ingested")
+            break
+
+        for i in json_data['ranks']:
+
+            top_100_performing_steam_games.append(i)
+
+        print("Page ", page, " ingested")
+
+        # return data
+            
+print("File one __name__ is set to: {}" .format(__name__))
 
 # create base table df
 
-list = []
-
-
 if __name__ == "__main__":
     data = download()
+    df = pd.DataFrame.from_records(top_100_performing_steam_games)
+
+    df["test_col"] = "test"
+    test_csv = df.to_csv('testcsv.csv')
