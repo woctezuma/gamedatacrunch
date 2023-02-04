@@ -19,10 +19,7 @@ def download(url=None):
 
     response = requests.get(url=url)
 
-    if response.ok:
-        data = response.json()
-    else:
-        data = None
+    data = response.json() if response.ok else None
 
     return data
 

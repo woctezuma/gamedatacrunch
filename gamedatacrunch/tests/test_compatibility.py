@@ -17,7 +17,7 @@ class TestCompatibilityMethods(unittest.TestCase):
         return dummy_app_slug
 
     def get_dummy_gdc_app(self):
-        gdc_app = dict()
+        gdc_app = {}
         gdc_app["i"] = self.get_dummy_app_id()
         gdc_app["n"] = self.get_dummy_app_name()
         gdc_app["s"] = self.get_dummy_app_slug()
