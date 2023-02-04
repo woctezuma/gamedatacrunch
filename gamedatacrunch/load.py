@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 from gamedatacrunch.download import download
 from gamedatacrunch.utils import get_cached_database_filename, get_data_folder
@@ -9,13 +10,13 @@ def load(file_name=None, url=None):
         file_name = get_data_folder() + get_cached_database_filename()
 
     try:
-        with open(file_name, encoding="utf8") as f:
+        with Path(file_name).open(encoding="utf8") as f:
             data = json.load(f)
 
     except FileNotFoundError:
         data = download(url=url)
 
-        with open(file_name, "w", encoding="utf8") as f:
+        with Path(file_name).open("w", encoding="utf8") as f:
             json.dump(data, f)
 
     del data["cached"]
